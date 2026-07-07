@@ -3,111 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشغل البث المباشر</title>
+    <title>حالة البث المباشر</title>
     <style>
-        /* إعدادات الخطوط والألوان العامة */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0f172a; /* خلفية داكنة مريحة للعين */
+            background-color: #0f172a;
             color: #f8fafc;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-        }
-
-        /* الحاوية الرئيسية للمشغل */
-        .container {
-            width: 100%;
-            max-width: 900px;
-            padding: 20px;
             box-sizing: border-box;
         }
-
-        /* تصميم بطاقة المشغل الحديثة */
-        .player-card {
+        .status-card {
+            text-align: center;
+            width: 100%;
+            max-width: 550px;
+            padding: 40px 30px;
             background-color: #1e293b;
             border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
             border: 1px solid #334155;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
-
-        /* ترويسة المشغل */
-        .player-header {
-            padding: 15px 20px;
-            background: linear-gradient(135deg, #1e1b4b, #311042);
-            border-bottom: 1px solid #334155;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        h1 { 
+            color: #f59e0b; 
+            font-size: 26px; 
+            margin-top: 0;
+            margin-bottom: 20px; 
         }
-
-        .live-badge {
-            background-color: #ef4444;
-            color: white;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: bold;
-            text-transform: uppercase;
-            animation: blink 1.5s infinite;
+        p { 
+            color: #f8fafc; 
+            font-size: 18px; 
+            line-height: 1.6; 
+            margin: 10px 0; 
         }
-
-        .player-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        /* حاوية الفيديو لجعل الـ iframe متجاوباً تلقائياً */
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* نسبة أبعاد 16:9 شاشات العرض الحديثة */
-            height: 0;
-            overflow: hidden;
-            background-color: #000;
-        }
-
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* تأثير وميض لزر الـ LIVE */
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0.4; }
-            100% { opacity: 1; }
+        .lang-en { 
+            direction: ltr; 
+            font-family: sans-serif; 
+            color: #94a3b8 !important; 
+            font-size: 16px !important; 
+            margin-top: 25px !important; 
+            border-top: 1px solid #334155; 
+            padding-top: 25px; 
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="player-card">
-            <!-- ترويسة المشغل -->
-            <div class="player-header">
-                <span class="live-badge">مباشر LIVE</span>
-                <h1 class="player-title">قناة البث الرئيسية</h1>
-            </div>
-            
-            <!-- حاوية المشغل المتجاوبة -->
-            <div class="video-wrapper">
-                <iframe 
-                    src="https://live.bb6.dpdns.org/albaplayer/ch1/?serv=0" 
-                    allow="autoplay; encrypted-media" 
-                    allowfullscreen="true" 
-                    id="streamFrame">
-                </iframe>
-            </div>
-        </div>
+    <div class="status-card">
+        <h1>لا توجد مباريات هامة</h1>
+        <p>لا توجد أي مباريات مهمة حالياً، سنعود عندما تبدأ مباراة قادمة مهمة.</p>
+        
+        <p class="lang-en">There are no important matches live right now. We will stand by and return when an important match begins.</p>
     </div>
 
 </body>
